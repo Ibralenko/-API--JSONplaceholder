@@ -1,0 +1,21 @@
+
+body{
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #d4d0d0;
+}
+.container-post{
+background-color: #f6f0f0;
+margin-top: 10px;
+margin-bottom: 30px;
+padding: 50px;
+box-shadow: 10px 5px 5px red;
+}
+.title{
+    color: red;
+    font-size: 30px;
+}
+.text{
+font-size: 19px;
+}
