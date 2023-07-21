@@ -45,4 +45,5 @@ function piblishPost() {
     .catch(error => console.error(error));
 
   form.reset()
+  checkInputs()
 }
