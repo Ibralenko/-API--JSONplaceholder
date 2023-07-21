@@ -34,7 +34,7 @@ function piblishPost() {
     method: 'POST',
     body: JSON.stringify({
       title: title,
-      body: text
+      body: text,
     }),
     headers: {
       'Content-Type': 'application/json; charset=UTF-8'
