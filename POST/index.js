@@ -41,7 +41,7 @@ function piblishPost() {
     }
   })
     .then(response => response.json())
-    .then(json => createPost(json.title, json.text))
+    .then(json => createPost(json.title, json.body))
     .catch(error => console.error(error));
 }
 
