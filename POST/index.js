@@ -4,7 +4,6 @@ const form = document.forms.postForm;
 const inputTitle = document.getElementById('title-post')
 const inputText = document.getElementById('text-post')
 const posts = document.querySelector('.posts')
-const btn = document.querySelector('.btn')
 
 function checkInputs() {
   if (inputTitle.value === '' || inputText.value === '') {
