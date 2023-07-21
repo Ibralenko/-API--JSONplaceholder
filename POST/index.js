@@ -4,32 +4,29 @@ const form = document.forms.postForm;
 const inputTitle = document.getElementById('title-post')
 const inputText = document.getElementById('text-post')
 const posts = document.querySelector('.posts')
-const error = document.querySelector('.error')
 const btn = document.querySelector('.btn')
 
-function checkInputs () {
-  if (inputTitle.value === '' || inputText.value === ''){
+function checkInputs() {
+  if (inputTitle.value === '' || inputText.value === '') {
     return document.querySelector('.btn').disabled = true;
   } else {
     return document.querySelector('.btn').disabled = false;
   }
 }
-
 checkInputs()
-function createPost (title, text){
+
+function createPost(title, text) {
   const divPost = document.createElement('div');
   divPost.classList.add('post-container');
-  const titlePost = document.createElement('h3');
-  titlePost.classList.add('title')
-  titlePost.innerHTML = title;
-  const textPost = document.createElement('p');
-  textPost.classList.add('text-post')
-  textPost.innerText = text;
   posts.append(divPost)
-  divPost.append(titlePost, textPost)
+  divPost.innerHTML =
+    `
+    <h2 class="title">${title}</h2>
+    <p class="text">${text}</p>
+    `
 }
 
-function piblishPost(){
+function piblishPost() {
   const title = inputTitle.value;
   const text = inputText.value;
 
@@ -45,6 +42,8 @@ function piblishPost(){
   })
     .then(response => response.json())
     .then(json => createPost(json.title, json.text))
+    .catch(error => console.error(error));
 }
+
 
 

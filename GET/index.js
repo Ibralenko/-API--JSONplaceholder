@@ -6,9 +6,9 @@ const createPost = (title, body) => {
     containerPost.classList.add('container-post')
     const titlePost = document.createElement('h2')
     titlePost.classList.add('title')
-    titlePost.textContent = `Заголовок: ${title}`
+    titlePost.textContent = `${title}`
     const textPost = document.createElement('p')
-    textPost.textContent =`Статья: ${body}`
+    textPost.textContent =`${body}`
     textPost.classList.add('text')
     container.append(containerPost)
     containerPost.append(titlePost, textPost)
