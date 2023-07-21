@@ -38,7 +38,8 @@
 .btn:hover {
     opacity: 0.9;
 }
-.post-container{
+
+.post-container {
     text-align: center;
     border: 1px dotted black;
     box-shadow: 10px 5px 5px rgb(63, 63, 63);
