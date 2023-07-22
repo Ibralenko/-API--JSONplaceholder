@@ -21,11 +21,11 @@ function createPost(title, text) {
   divPost.innerHTML =
     `
     <h2 class="title">${title}</h2>
-    <p class="text">${text}</p>
+    <p class="text"><i>${text}</i></p>
     `
 }
 
-function piblishPost() {
+function publishPost() {
   const title = inputTitle.value;
   const text = inputText.value;
 
